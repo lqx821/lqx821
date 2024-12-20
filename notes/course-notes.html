@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程笔记 - 个人网站</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body class="notes-page">
+    <!-- 顶部导航 -->
+    <nav class="navbar navbar-expand-lg fixed-top notes-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-book-reader me-2"></i>学习笔记
+            </a>
+            <div class="nav-tools ms-auto">
+                <div class="search-box me-3">
+                    <input type="text" placeholder="搜索笔记...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <button class="theme-toggle me-3">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主体内容 -->
+    <div class="notes-container">
+        <!-- 左侧边栏 -->
+        <aside class="notes-sidebar">
+            <div class="sidebar-section">
+                <h3>笔记目录</h3>
+                <ul class="notes-tree">
+                    <li class="active">
+                        <i class="fas fa-chevron-right"></i>
+                        新媒体写作与运营
+                        <ul>
+                            <li>内容创作策略</li>
+                            <li>平台运营技巧</li>
+                            <li>数据分析方法</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-chevron-right"></i>
+                        <a href="#interaction-design" class="note-link">新媒体交互设计</a>
+                        <ul>
+                            <li>交互设计原理</li>
+                            <li>用户体验设计</li>
+                            <li>界面设计要素</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-chevron-right"></i>
+                        数字媒体技术
+                    </li>
+                    <li>
+                        <i class="fas fa-chevron-right"></i>
+                        传播学理论
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>学习进度</h3>
+                <div class="progress-stats">
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%"></div>
+                    </div>
+                    <span>已完成 75%</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 中间内容区 -->
+        <main class="notes-content">
+            <div class="content-header">
+                <h1>新媒体写作与运营
+                    <span class="badge bg-primary">进行中</span>
+                </h1>
+                <div class="meta-info">
+                    <span><i class="far fa-calendar"></i> 最后更新：2024-03-20</span>
+                    <span><i class="far fa-clock"></i> 学习时长：12小时</span>
+                </div>
+                <div class="tags">
+                    <span class="tag">新媒体</span>
+                    <span class="tag">写作</span>
+                    <span class="tag">运营</span>
+                </div>
+            </div>
+
+            <div class="note-cards">
+                <div class="note-card">
+                    <div class="card-header">
+                        <h3>内容创作策略</h3>
+                        <span class="importance-badge">重要</span>
+                    </div>
+                    <div class="card-body">
+                        <p>新媒体写作的核心要点：</p>
+                        <ul>
+                            <li>受众分析与定位</li>
+                            <li>内容框架搭建</li>
+                            <li>写作技巧运用</li>
+                            <li>创意表达方式</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="note-card">
+                    <div class="card-header">
+                        <h3>平台运营技巧</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>平台运营的关键点：</p>
+                        <ul>
+                            <li>内容规划与发布</li>
+                            <li>用户互动策略</li>
+                            <li>数据监测分析</li>
+                            <li>效果优化方法</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="note-card" id="interaction-design">
+                    <div class="card-header">
+                        <h3>新媒体交互设计</h3>
+                        <span class="importance-badge">重要</span>
+                    </div>
+                    <div class="card-body">
+                        <p>交互设计核心要点：</p>
+                        <ul>
+                            <li>用户需求分析</li>
+                            <li>交互流程设计</li>
+                            <li>界面原型制作</li>
+                            <li>用户体验优化</li>
+                        </ul>
+                        <div class="note-attachment">
+                            <i class="fas fa-file-pdf"></i>
+                            <a href="media-interaction.pdf" target="_blank">查看完整笔记</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 右侧工具栏 -->
+        <aside class="notes-tools">
+            <div class="tools-section">
+                <h3>笔记大纲</h3>
+                <ul class="outline-list">
+                    <li><a href="#" class="active">内容创作策略</a></li>
+                    <li><a href="#">平台运营技巧</a></li>
+                    <li><a href="#">数据分析方法</a></li>
+                </ul>
+            </div>
+            <div class="tools-section">
+                <h3>学习提醒</h3>
+                <div class="reminder-card">
+                    <i class="fas fa-bell"></i>
+                    <p>距离下次复习还有 2 天</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

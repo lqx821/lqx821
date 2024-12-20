@@ -1,0 +1,229 @@
+/* AI工具导航样式 */
+:root {
+    --accent-color: #4CAF50;
+    --bg-light: #f8f9fa;
+    --text-dark: #333;
+}
+
+/* Hero区域样式 */
+.ai-hero {
+    background: #E8F5E9;
+    padding: 100px 0;
+    color: #2E7D32;
+    text-align: center;
+}
+
+.ai-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: none;
+    color: #1B5E20;
+}
+
+.ai-hero .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    color: #388E3C;
+}
+
+.ai-hero .search-box {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ai-hero .search-box input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.95);
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.ai-hero .search-box i {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+/* 分类导航样式 */
+.categories-filter {
+    position: sticky;
+    top: 76px;
+    background: #fff;
+    padding: 1rem 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.category-btn {
+    position: relative;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: #fff;
+    color: var(--text-dark);
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.category-btn i {
+    margin-right: 0.5rem;
+    color: var(--accent-color);
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.category-btn:hover i,
+.category-btn.active i {
+    color: #fff;
+}
+
+/* 子分类下拉菜单 */
+.subcategories {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s ease;
+    z-index: 100;
+}
+
+.category-btn:hover .subcategories {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+}
+
+.subcategories a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.subcategories a:hover {
+    background-color: var(--bg-light);
+    color: var(--accent-color);
+}
+
+/* 工具卡片样式 */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.tool-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.tool-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--bg-light);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.tool-icon i {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
+
+.tool-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.tool-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tool-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tool-tags span {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.tag-free {
+    background: #E3F2FD;
+    color: #1976D2;
+}
+
+.tag-pro {
+    background: #FFF3E0;
+    color: #F57C00;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .ai-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .ai-hero .lead {
+        font-size: 1.2rem;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .category-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+} 
